@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "454903637805",
+    "project_id": "moviematch-40af6",
+    "storage_bucket": "moviematch-40af6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454903637805:android:813f3eaeaeb0d7cdd955a4",
+        "android_client_info": {
+          "package_name": "com.example.moviematch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACk_d2x3hQkTHJvf1iJ3bwaKEsgFtpf1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

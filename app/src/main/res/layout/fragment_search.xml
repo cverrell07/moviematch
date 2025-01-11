@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Find"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/searchHeaderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="movie, TV shows, series"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text=", and more..."
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mainSearchTIL"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edittext_search"
+            android:textColorHint="#52FFFFFF"
+            app:boxStrokeColor="#4DFFFFFF"
+            app:boxStrokeWidth="0dp"
+            app:endIconMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            app:startIconDrawable="@drawable/ic_search"
+            app:startIconScaleType="center"
+            app:startIconTint="#60FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mainSearchET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Search a movie..."
+                android:importantForAccessibility="no"
+                android:inputType="text"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:paddingVertical="3dp"
+                android:paddingLeft="40dp"
+                android:paddingEnd="10dp"
+                android:selectAllOnFocus="false"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#32FFFFFF"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textIsSelectable="false"
+                app:textInputLayoutFocusedRectEnabled="false" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchMovieRV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainSearchTIL" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a1a"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:id="@+id/headerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Welcome"
+        android:textColor="#FEFFBB"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/poppins_bold"
+        android:text="back!"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTV" />
+
+    <EditText
+        android:id="@+id/emailSignInET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:background="@drawable/edittext_field"
+        android:textColorHint="#8E8E8E"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:hint=" Enter your email"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/passwordSignInET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:background="@drawable/edittext_field"
+        android:textColorHint="#8E8E8E"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailSignInET" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signInBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_shape_yellow"
+        android:backgroundTint="@color/yellow"
+        android:capitalize="none"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="#1A1A1A"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordSignInET" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInBtn">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="3dp"
+            android:text="Don't have any account?"
+            android:textAlignment="viewEnd"
+            android:textColor="#7B7B7B"
+            android:fontFamily="@font/poppins_light" />
+
+        <TextView
+            android:id="@+id/goToSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/make_me_a_new_one"
+            android:textColor="#FFF7BB"
+            android:textStyle="normal"
+            android:fontFamily="@font/poppins_medium" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

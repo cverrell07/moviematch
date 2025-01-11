@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MovieDetailActivity">
+
+    <ImageButton
+        android:id="@+id/detailBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="#1A1A1A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back"
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/detailTitleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="74dp"
+        android:text="Movie Title"
+        android:fontFamily="@font/poppins_bold"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/detailBackBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/detailPosterIV"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTitleTV"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/detailMovieLH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailPosterIV">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_star"
+                app:tint="@color/yellow" />
+
+            <TextView
+                android:id="@+id/detailRatingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingLeft="2dp"
+                android:text="5.0/10"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_calendar"
+                app:tint="#80FFFFFF" />
+
+            <TextView
+                android:id="@+id/detailYearTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="2dp"
+                android:text="1990"
+                android:textAlignment="center"
+                android:textColor="#80FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_genre"
+                app:tint="#80FFFFFF" />
+
+            <TextView
+                android:id="@+id/detailGenreTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/poppins_light"
+                android:paddingLeft="2dp"
+                android:text="Drama"
+                android:textAlignment="textStart"
+                android:textColor="#80FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailButtonLH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailMovieLH">
+
+        <Button
+            android:id="@+id/loveItButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2B2A2A"
+            android:text="Love it!"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/pink" />
+
+        <Button
+            android:id="@+id/willWatchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="#2B2A2A"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="I will watch it"
+            android:textColor="@color/yellow" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/detailOverviewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:text="Overview"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailButtonLH" />
+
+    <TextView
+        android:id="@+id/detailOverviewTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:lineSpacingExtra="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Titanic is an epic romance and disaster film that follows the journey of the luxurious RMS Titanic..."
+        android:textAlignment="viewStart"
+        android:textColor="#B3FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailOverviewLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
